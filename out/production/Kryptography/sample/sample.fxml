@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="400" maxWidth="600" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <VBox HBox.hgrow="SOMETIMES">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="196.0">
+               <children>
+                  <Button id="get_alphabet_btn" fx:id="get_alphabet_btn" mnemonicParsing="false" onMouseClicked="#getAlphabet" text="Get alphabet" />
+                  <Label fx:id="alphabet_text_view" text="Alphabet" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="196.0">
+               <children>
+                  <Button id="get_probabilities_btn" fx:id="get_probabilities_btn" mnemonicParsing="false" onMouseClicked="#getProbabilities" text="Get probabilities" />
+                  <Label id="is_probabilities_ready_text_view" fx:id="is_probabilities_ready_text_view" text="Not ready" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="196.0">
+               <children>
+                  <Button id="get_string_to_encode_btn" mnemonicParsing="false" onMouseClicked="#getStringToEncode" text="Get string to encode" />
+                  <Label id="string_to_encode_text_view" fx:id="string_to_encode_text_view" text="String to encode" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="196.0">
+               <children>
+                  <Button id="build_huffman_tree_btn" mnemonicParsing="false" onMouseClicked="#buildHuffmanTree" text="Build Huffman tree" />
+                  <Label id="is_tree_built_text_view" fx:id="is_tree_built_text_view" text="Not built" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Button id="encode_btn" mnemonicParsing="false" onMouseClicked="#encodeString" text="Encode">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label id="encoded_string" fx:id="encoded_string" text="Encoded string">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children></VBox>
+      <VBox layoutX="10.0" layoutY="10.0" HBox.hgrow="SOMETIMES">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="196.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <Button id="get_alphabet_btn" fx:id="get_K_btn" mnemonicParsing="false" onMouseClicked="#getK" text="Show info" />
+                  <Label fx:id="K_text_view" text="Info" textAlignment="JUSTIFY" HBox.hgrow="SOMETIMES">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="196.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <Button id="get_alphabet_btn" fx:id="get_text_to_decode_btn1" mnemonicParsing="false" onMouseClicked="#getTextToDecode" text="Choose text to decode" />
+                  <Label fx:id="decoded_text_text_view" text="decoded text" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
