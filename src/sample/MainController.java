@@ -94,6 +94,18 @@ public class MainController {
             return;
         }
 
+        StringBuilder newAlphabetStringBuilder = new StringBuilder();
+        char[] charArray = alphabet.toCharArray();
+        ArrayList<Double> newProbs = new ArrayList<>();
+        for (int i = 0; i < alphabet.length(); i++) {
+            if (!probabilities.get(i).equals(0.0)) {
+                newAlphabetStringBuilder.append(charArray[i]);
+                newProbs.add(probabilities.get(i));
+            }
+        }
+        alphabet = newAlphabetStringBuilder.toString();
+        probabilities = newProbs;
+
         Double[] probsIndouble = new Double[alphabet.length()];
         probsIndouble = probabilities.toArray(probsIndouble);
 
